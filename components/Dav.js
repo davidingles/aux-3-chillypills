@@ -6,26 +6,26 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D AGROTREND.gltf");
+  const { nodes, materials } = useGLTF("/4D CHILLYPILLS.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["TQ_ARD-geom001"].geometry}
-        material={materials["TQ_ARD_front.001"]}
+        geometry={nodes["TQ2_ARD-geom"].geometry}
+        material={materials.TQ2_ARD_front}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["TQ_ARD-geom001_1"].geometry}
-        material={materials.TQ_ARD_back}
+        geometry={nodes["TQ2_ARD-geom_1"].geometry}
+        material={materials.TQ2_ARD_back}
       />
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes["TQ_ARD-geom001_2"].geometry}
-        material={materials.TQ_ARD_edge}
+        geometry={nodes["TQ2_ARD-geom_2"].geometry}
+        material={materials.TQ2_ARD_edge}
       />
       <mesh
         castShadow
@@ -49,4 +49,4 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/3D AGROTREND.gltf");
+useGLTF.preload("/4D CHILLYPILLS.gltf");
